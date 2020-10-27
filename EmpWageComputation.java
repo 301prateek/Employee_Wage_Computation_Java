@@ -91,52 +91,50 @@ public class EmpWageComputation{
                 	}
 
 		}
-		 System.out.println("This Months salary: "+sum);
+		System.out.println("This Months salary: "+sum);
 
 		System.out.println("_________Calculation for 20 days or 100 hours__________");
 
-                  int sum1  = 0;
-						int hours = 0;
-						int days  = 0;
+			int sum1  = 0;
+			int hours = 0;
+			int days  = 0;
 
 
-                  while(true){
+                  	while(true){
 
-  			              	int c = rd.nextInt(3);
+				int c = rd.nextInt(3);
 
-                        if(c == emp_present){
+	                        if(c == emp_present){
 
-                                int time = 8;
-										  hours = hours+time;
-                                int salary = wage_per_hr*time ;
-                                sum1 = sum1 + salary;
-										  days++;
+        	                        int time = 8;
+					hours = hours+time;
+                                	int salary = wage_per_hr*time ;
+                                	sum1 = sum1 + salary;
+					days++;
 
-                        }
-                        else if(c == emp_part_time){
+                        	}
+                        	else if(c == emp_part_time){
 
-                                int time = 4;
-										  hours = hours+time;
-                                int salary = wage_per_hr*time ;
-                                sum1 = sum1 + salary;
-										  days++;
+                                	int time = 4;
+					hours = hours+time;
+                	                int salary = wage_per_hr*time ;
+                                	sum1 = sum1 + salary;
+					days++;
+                        	}
+                        	else{
 
-                        }
-                        else{
-
-                                int time = 0;
-                                int salary = wage_per_hr*time ;
-                                sum1 = sum1 + salary;
-										  days++;
-                        }
-								if( days == 20 || hours == 100 ){
-									break;
-								}
+                                	int time = 0;
+                                	int salary = wage_per_hr*time ;
+                                	sum1 = sum1 + salary;
+					days++;
+                        	}
+				if( days == 20 || hours == 100 ){
+					break;
+				}
 
                 }
-                 System.out.println("This Months salary: "+sum1);
-					  System.out.println("No of days: "+days);
-					  System.out.println("No of Hours: "+hours);
-
+		System.out.println("This Months salary: "+sum1);
+		System.out.println("No of days: "+days);
+		System.out.println("No of Hours: "+hours);
 	}
 }
