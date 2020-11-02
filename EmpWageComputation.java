@@ -120,11 +120,10 @@ public class EmpWageComputation{
 
 
 		public static void daysHours(){
-
-		int emp_present = 1;
-      int emp_absent  = 0;
-      int wage_per_hr =20;
-      int emp_part_time = 2;
+			int emp_present = 1;
+     			int emp_absent  = 0;
+      			int wage_per_hr =20;
+      			int emp_part_time = 2;
 
 			int sum1  = 0;
 			int hours = 0;
@@ -139,7 +138,7 @@ public class EmpWageComputation{
 
 					int time = 8;
 					hours = hours+time;
-               int salary = wage_per_hr*time ;
+               				int salary = wage_per_hr*time ;
 					sum1 = sum1 + salary;
 					days++;
 
@@ -151,8 +150,8 @@ public class EmpWageComputation{
 					int salary = wage_per_hr*time ;
 					sum1 = sum1 + salary;
 					days++;
-             }
-             else{
+             			}
+             			else{
 					int time = 0;
 					int salary = wage_per_hr*time ;
 					sum1 = sum1 + salary;
