@@ -9,9 +9,14 @@ public class EmpWageComputation{
 		int a = rd.nextInt(3);
 
 		EmpWageComputation ewc = new EmpWageComputation();
-                ewc.DailyWage(a);
+      ewc.DailyWage(a);
 		System.out.println("________________Using Case Statement________________");
 		ewc.CaseStatement(a);
+		System.out.println("________________Month_______________________________");
+		month();
+		System.out.println("_________Calculation for 20 days or 100 hours__________");
+		daysHours();
+
 
 	}
 
@@ -35,10 +40,10 @@ public class EmpWageComputation{
 			System.out.println("Daily salary: "+salary);
 		}
 		else{
-                        System.out.println("Employee Absent");
-                        int time = 0;
-                        int salary = wage_per_hr*time ;
-                        System.out.println("Daily salary: "+salary);
+			System.out.println("Employee Absent");
+			int time = 0;
+			int salary = wage_per_hr*time ;
+			System.out.println("Daily salary: "+salary);
 		}
 	}
 
@@ -58,16 +63,16 @@ public class EmpWageComputation{
 			System.out.println("Salary "+sal1);
 			break;
 		case 2:
-                        System.out.println("Part time");
-                        int t2 =4;
-                        int sal2 =wage_per_hr*t2;
-                        System.out.println("Salary "+sal2);
+			System.out.println("Part time");
+			int t2 =4;
+			int sal2 =wage_per_hr*t2;
+			System.out.println("Salary "+sal2);
 			break;
 		case 0:
-                        System.out.println("Absent");
-                        int t3 =0;
-                        int sal3 =wage_per_hr*t3;
-                        System.out.println("Salary "+sal3);
+			System.out.println("Absent");
+			int t3 =0;
+			int sal3 =wage_per_hr*t3;
+			System.out.println("Salary "+sal3);
 			break;
 		default:
 			System.out.println("Wrong input");
@@ -75,5 +80,92 @@ public class EmpWageComputation{
 	}
 
 
+	public static void month(){
+		int sum = 0;
+		int emp_present = 1;
+                int emp_absent  = 0;
+                int wage_per_hr =20;
+                int emp_part_time = 2;
+
+
+		for( int i=0; i<20; i++ ){
+			Random rd = new Random();
+
+			int b = rd.nextInt(3);
+
+			if(b == emp_present){
+ 				System.out.println("Present");
+				int time = 8;
+				int salary = wage_per_hr*time ;
+				sum = sum + salary;
+
+			}
+			else if(b == emp_part_time){
+				System.out.println("Part time");
+				int time = 4;
+				int salary = wage_per_hr*time ;
+				sum = sum + salary;
+
+ 			}
+			else{
+				System.out.println("Absent");
+				int time = 0;
+				int salary = wage_per_hr*time ;
+				sum = sum + salary;
+			}
+
+		}
+		System.out.println("This Months salary: "+sum);
+	}
+
+
+		public static void daysHours(){
+
+		int emp_present = 1;
+      int emp_absent  = 0;
+      int wage_per_hr =20;
+      int emp_part_time = 2;
+
+			int sum1  = 0;
+			int hours = 0;
+			int days  = 0;
+
+
+			while(true){
+				Random rd = new Random();
+
+				int c = rd.nextInt(3);
+				if(c == emp_present){
+
+					int time = 8;
+					hours = hours+time;
+               int salary = wage_per_hr*time ;
+					sum1 = sum1 + salary;
+					days++;
+
+				}
+				else if(c == emp_part_time){
+
+					int time = 4;
+					hours = hours+time;
+					int salary = wage_per_hr*time ;
+					sum1 = sum1 + salary;
+					days++;
+             }
+             else{
+					int time = 0;
+					int salary = wage_per_hr*time ;
+					sum1 = sum1 + salary;
+					days++;
+                        	}
+				if( days == 20 || hours == 100 ){
+					break;
+				}
+
+                }
+		System.out.println("This Months salary: "+sum1);
+		System.out.println("No of days: "+days);
+		System.out.println("No of Hours: "+hours);
+	}
 }
 
